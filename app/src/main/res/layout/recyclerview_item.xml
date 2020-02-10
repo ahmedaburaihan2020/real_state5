@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    android:clipChildren="true"
+    android:clipToPadding="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/itemThumbnail"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/bg"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvItemPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingBottom="10dp"
+            android:text="RM 120293.00"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/itemThumbnail"
+            app:layout_constraintEnd_toEndOf="@+id/itemThumbnail"
+            app:layout_constraintStart_toStartOf="@+id/itemThumbnail" />
+
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:lines="2"
+            android:layout_margin="8dp"
+            android:text="Aqua Villa, Petaling Jaya"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/itemThumbnail"
+            app:layout_constraintStart_toStartOf="@+id/itemThumbnail"
+            app:layout_constraintTop_toBottomOf="@id/itemThumbnail" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:background="@drawable/line"
+            android:backgroundTint="#ccc"
+            app:layout_constraintTop_toBottomOf="@id/tvItemName"
+            app:layout_constraintStart_toStartOf="@id/tvItemName"
+            app:layout_constraintEnd_toEndOf="@id/tvItemName"/>
+
+        <ImageView
+            android:id="@+id/itemPublisherLogo"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/bg"
+            app:layout_constraintStart_toStartOf="@id/tvItemName"
+            app:layout_constraintTop_toBottomOf="@id/line" />
+
+        <TextView
+            android:id="@+id/tvItemPublisherName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingBottom="5dp"
+            android:text="Aqua Villa, Petaling Jaya"
+            android:textSize="10sp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/itemPublisherLogo"
+            app:layout_constraintEnd_toEndOf="@+id/tvItemName"
+            app:layout_constraintStart_toEndOf="@id/itemPublisherLogo"
+            app:layout_constraintTop_toTopOf="@id/itemPublisherLogo" />
+
+        <TextView
+            android:id="@+id/tvAreaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="Area: "
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvItemName"
+            app:layout_constraintTop_toBottomOf="@+id/itemPublisherLogo" />
+
+
+        <TextView
+            android:id="@+id/tvArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="Selangor"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/tvAreaLabel"
+            app:layout_constraintTop_toTopOf="@+id/tvAreaLabel" />
+
+        <TextView
+            android:id="@+id/tvTimeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="Today: "
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tvTime"
+            app:layout_constraintTop_toTopOf="@+id/tvTime" />
+
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:text="16:00"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvItemName"
+            app:layout_constraintTop_toTopOf="@+id/tvAreaLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
