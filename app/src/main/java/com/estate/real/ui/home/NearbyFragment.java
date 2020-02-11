@@ -106,7 +106,7 @@ public class NearbyFragment extends Fragment  {
         homerecyclerview = parent.findViewById(R.id.homerecyclerview);
         list = new ArrayList<>();
         list.add(new HomeRecyclerViewData("Professional Services",R.drawable.im1));
-        list.add(new HomeRecyclerViewData("Contractor",R.drawable.im2));
+        list.add(new HomeRecyclerViewData("Contractor Services",R.drawable.im2));
         list.add(new HomeRecyclerViewData("Hardware Trading",R.drawable.im3));
         list.add(new HomeRecyclerViewData("Whole Seller",R.drawable.im4));
         list.add(new HomeRecyclerViewData("Whole Sale Dealer",R.drawable.im5));
