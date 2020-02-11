@@ -20,6 +20,8 @@ import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.estate.real.R;
+import com.estate.real.ui.HomeRecyclerAdapter;
+import com.estate.real.ui.HomeRecyclerViewData;
 import com.estate.real.ui.Item;
 import com.estate.real.ui.ParentItem;
 import com.estate.real.ui.ParentRecyclerAdapter;
@@ -36,6 +38,11 @@ public class NearbyFragment extends Fragment  {
     CarouselView carouselView;
     int[] sampleImages  = {R.drawable.image1, R.drawable.image2,
             R.drawable.image3, R.drawable.image4, R.drawable.image5, R.drawable.image6};
+//    private RecyclerView
+    private ArrayList<HomeRecyclerViewData> list;
+    private RecyclerView homerecyclerview;
+    private HomeRecyclerAdapter homeRecyclerAdapter;
+
 
 
     public NearbyFragment() {
@@ -92,6 +99,25 @@ public class NearbyFragment extends Fragment  {
 
         RecyclerView recyclerView = parent.findViewById(R.id.parentRecyclerView);
         recyclerView.setAdapter(adapter);
+
+
+        //inflating home recycler adapter
+
+        homerecyclerview = parent.findViewById(R.id.homerecyclerview);
+        list = new ArrayList<>();
+        list.add(new HomeRecyclerViewData("Professional Services",R.drawable.im1));
+        list.add(new HomeRecyclerViewData("Contractor",R.drawable.im2));
+        list.add(new HomeRecyclerViewData("Hardware Trading",R.drawable.im3));
+        list.add(new HomeRecyclerViewData("Whole Seller",R.drawable.im4));
+        list.add(new HomeRecyclerViewData("Whole Sale Dealer",R.drawable.im5));
+        list.add(new HomeRecyclerViewData("Professional Services",R.drawable.im6));
+        list.add(new HomeRecyclerViewData("Professional Services",R.drawable.im7));
+        list.add(new HomeRecyclerViewData("Professional Services",R.drawable.im8));
+
+        homeRecyclerAdapter = new HomeRecyclerAdapter(getContext(),list);
+        homerecyclerview.setAdapter(homeRecyclerAdapter);
+        homeRecyclerAdapter.notifyDataSetChanged();
+
 
 
         //Code for Carousel View
